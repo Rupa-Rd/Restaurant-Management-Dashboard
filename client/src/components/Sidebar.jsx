@@ -86,7 +86,7 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
                       fontSize="1rem"
                       sx={{ color: theme.palette.secondary[100] }}
                     >
-                      Roopa Dharshini
+                      {user.name}
                     </Typography>
                   </Box>
                 </Box>
