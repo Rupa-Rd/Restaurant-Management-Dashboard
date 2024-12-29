@@ -7,7 +7,10 @@ function FoodCard({ image, name, rating }) {
   return (
     <Box
       sx={{ 
+        display: 'flex',
+        flexDirection: 'column',
         width: "65px", 
+        margin: 'auto',
         borderRadius: '8px', 
         boxShadow: "none", // Removes any shadow around the card
         backgroundColor: "transparent" // Ensures no background color

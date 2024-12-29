@@ -12,6 +12,7 @@ import ProfitChat from "components/ProfitChat";
 import PopularTimeChart from "components/PopularTimeChart";
 import Dishes from "components/Dishes";
 import ProfitCalculator from "components/ProfitCalculator";
+import UserRatings from "components/UserRatings";
 
 function Dashboard() {
   const theme = useTheme(); // Access the current theme
@@ -108,13 +109,14 @@ function Dashboard() {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={theme.palette.background.alt}
-          p={2}
-          height="530px"
+          p={3}
+          height="540px"
           borderRadius="0.55rem"
         >
           <Typography variant="h6" fontWeight="bold" mb={1}>
-            Placeholder
+            User Ratings
           </Typography>
+          <UserRatings />
           {/* Add your content here */}
         </Box>
 
