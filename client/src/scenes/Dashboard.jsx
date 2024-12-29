@@ -24,7 +24,7 @@ function Dashboard() {
       : theme.palette.secondary.main;
 
   return (
-    <Box m="1rem 2rem">
+    <Box m="0rem 2rem" sx={{ overflow: 'hidden' }}>
       <Header title="Dashboard" />
 
       {/* Grid container for StatBoxes */}
@@ -137,7 +137,7 @@ function Dashboard() {
           gridRow="span 1"
           backgroundColor={theme.palette.background.alt}
           height="250px"
-          
+          padding={3}
           borderRadius="0.55rem"
         >
           

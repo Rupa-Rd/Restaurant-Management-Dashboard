@@ -22,7 +22,7 @@ import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { ChevronLeft, ChevronRightOutlined } from "@mui/icons-material";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
-import profileImage from "assets/profile.png"; // Assuming the image is in the assets folder
+import profileImage from "assets/profile.jpg"; // Assuming the image is in the assets folder
 
 const navItems = [
   { text: "Dashboard", icon: <SpaceDashboardOutlinedIcon /> },
@@ -99,7 +99,7 @@ const Sidebar = ({ user, drawerWidth, isSidebarOpen, setIsSidebarOpen, isNonMobi
               </FlexBetween>
             </Box>
 
-            <Divider sx={{ my: 1 }} />
+            {/* <Divider sx={{ my: 1 }} /> */}
 
             <List>
               {navItems.map(({ text, icon }) => {

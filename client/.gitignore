@@ -25,4 +25,5 @@ yarn-error.log*
 
 client/src/assets/*
 
+assets
 chartData

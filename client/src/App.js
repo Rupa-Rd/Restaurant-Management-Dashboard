@@ -9,6 +9,7 @@ import Layout from "./scenes/Layout";
 import Menu from "./scenes/Menu";
 import Order from "scenes/Order";
 import Customer from "scenes/Customer";
+import Setting from "scenes/Setting";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -25,6 +26,7 @@ function App() {
               <Route path="/menu" element={<Menu />} />
               <Route path="/orders" element={<Order />}/>
               <Route path="/customers" element={<Customer />} />
+              <Route path="/settings" element={<Setting />} />
             </Route>
           </Routes>
         </ThemeProvider>
