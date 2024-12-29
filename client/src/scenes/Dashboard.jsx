@@ -2,15 +2,24 @@ import React from "react";
 import { Box, Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
 import Header from "components/Header";
 import StatBox from "components/StatBox"; // Assuming you have this component for individual stats
-import { People, ShoppingCart, AttachMoney, ThumbUp } from "@mui/icons-material"; // Material icons for each stat
+import {
+  People,
+  ShoppingCart,
+  AttachMoney,
+  ThumbUp,
+} from "@mui/icons-material"; // Material icons for each stat
 import ProfitChat from "components/ProfitChat";
 import PopularTimeChart from "components/PopularTimeChart";
+import Dishes from "components/Dishes";
 
 function Dashboard() {
   const theme = useTheme(); // Access the current theme
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   // Determine the icon color based on the current theme mode (light or dark)
-  const iconColor = theme.palette.mode === 'dark' ? theme.palette.primary.main : theme.palette.secondary.main;
+  const iconColor =
+    theme.palette.mode === "dark"
+      ? theme.palette.primary.main
+      : theme.palette.secondary.main;
 
   return (
     <Box m="1rem 2rem">
@@ -53,7 +62,7 @@ function Dashboard() {
         mt="20px"
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
-        gridTemplateRows="repeat(6, 1fr)"  // Adjusted rows to create a 6-row grid
+        gridTemplateRows="repeat(6, 1fr)" // Adjusted rows to create a 6-row grid
         gap="20px"
         gridAutoRows="minmax(100px, auto)"
         sx={{
@@ -65,7 +74,6 @@ function Dashboard() {
           gridColumn="span 4"
           gridRow="span 1"
           backgroundColor={theme.palette.background.alt}
-            
           height="270px"
           borderRadius="0.55rem"
         >
@@ -77,13 +85,20 @@ function Dashboard() {
           gridColumn="span 4"
           gridRow="span 1"
           backgroundColor={theme.palette.background.alt}
-          p={2}
           height="270px"
+          padding={3}
           borderRadius="0.55rem"
         >
           <Typography variant="h6" fontWeight="bold" mb={1}>
-            Placeholder
+            Liked Dishes
           </Typography>
+          <Dishes />
+
+          <Typography variant="h6" fontWeight="bold" mt={0} mb={1}>
+            Dis-liked Dishes
+          </Typography>
+          <Dishes />
+
           {/* Add your content here */}
         </Box>
 
@@ -126,8 +141,6 @@ function Dashboard() {
           </Typography>
           {/* Add your content here */}
         </Box>
-
-        
       </Box>
     </Box>
   );
