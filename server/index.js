@@ -34,14 +34,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 /* ROUTES */
-app.use("/general", generalRoutes);
-app.use("/customer", customerRoutes);
-app.use("/order", orderRoutes);
-app.use("/menu", menuRoutes);
-app.use("/setting", settingRoutes);
+app.use("/api/general", generalRoutes);
+app.use("/api/customer", customerRoutes);
+app.use("/api/order", orderRoutes);
+app.use("/api/menu", menuRoutes);
+app.use("/api/setting", settingRoutes);
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
