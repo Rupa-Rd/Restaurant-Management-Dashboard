@@ -16,12 +16,12 @@ import User from "./models/User.js"
 import Customer from "./models/customerModel.js"
 import Order from "./models/orderModel.js"
 import Menu from "./models/menuModel.js"
-import {
-    userDetails,
-    orderDetails,
-    menuDetails,
-    customerDetails,
-}from "./data/index.js"
+// import {
+//     userDetails,
+//     orderDetails,
+//     menuDetails,
+//     customerDetails,
+// }from "./data/index.js"
 
 /* CONFIGURATIONS */
 dotenv.config();
