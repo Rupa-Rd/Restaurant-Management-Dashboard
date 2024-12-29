@@ -11,6 +11,7 @@ import {
 import ProfitChat from "components/ProfitChat";
 import PopularTimeChart from "components/PopularTimeChart";
 import Dishes from "components/Dishes";
+import ProfitCalculator from "components/ProfitCalculator";
 
 function Dashboard() {
   const theme = useTheme(); // Access the current theme
@@ -134,11 +135,11 @@ function Dashboard() {
           gridRow="span 1"
           backgroundColor={theme.palette.background.alt}
           height="250px"
+          
           borderRadius="0.55rem"
         >
-          <Typography variant="h6" fontWeight="bold" mb={1}>
-            Placeholder
-          </Typography>
+          
+          <ProfitCalculator />
           {/* Add your content here */}
         </Box>
       </Box>
