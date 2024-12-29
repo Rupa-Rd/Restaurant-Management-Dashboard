@@ -13,13 +13,14 @@ import settingRoutes from "./routes/setting.js";
 
 /* DATA IMPORTS*/
 import User from "./models/User.js"
-// import Customer from "./models/customerModel.js"
-// import Order from "./models/orderModel.js"
-// import Menu from "./models/menuModel.js"
+import Customer from "./models/customerModel.js"
+import Order from "./models/orderModel.js"
+import Menu from "./models/menuModel.js"
 import {
     userDetails,
     orderDetails,
     menuDetails,
+    customerDetails,
 }from "./data/index.js"
 
 /* CONFIGURATIONS */
@@ -52,5 +53,8 @@ mongoose
 
     /* CODE TO INSERT DATA INTO DB */
     // User.insertMany(userDetails);
+    // Customer.insertMany(customerDetails);
+    // Order.insertMany(orderDetails);
+    // Menu.insertMany(menuDetails);
   })
   .catch((error) => console.log(`${error} did not connect`));
